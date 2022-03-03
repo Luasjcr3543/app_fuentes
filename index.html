@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Fuentes radioactivas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,900;1,100;1,200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+
+    <datalist id="isotopos">
+        <option value="Cs-137"></option>
+        <option value="Co-60"></option>
+        <option value="Am-147"></option>
+
+    </datalist>
+   
+    <div class="contenedor-principal">
+        <nav class="menu ocultar">
+            <i class="fa-solid fa-xmark"></i>
+            <ul>
+               
+                <li><i class="fa-solid fa-radiation"></i>Inicio</li>
+                <li ><i class="fa-solid fa-circle-radiation"></i>Nueva fuente</li>
+                <li><i class="fa-solid fa-biohazard"></i>Calcular distancia</li>
+                <li><i class="fa-solid fa-atom"></i>Calculo de actividad</li>
+                <li><i class="fa-brands fa-elementor"></i>Base de datos isotopos</li>
+            </ul>
+        </nav>
+        <header class="menu-mobile" id="menu-mobile">
+            <div><i class="fa-solid fa-bars"></i></div>
+            <div><i class="fa-solid fa-radiation"></i>SI Radiacion</div>
+        </header>
+        <main>
+            <section class="alta-fuente ocultar ">
+                <h3>Alta nueva fuente </h3>
+                <p>Ingresa los datos correspondientes a la fuente que desees guardar en la base de datos</p>
+                <form action="" >
+                    <label for="isotopos"> 
+                        Isotopo:
+                        <input type="text" list="lista-isotopos" name="isotopos">
+                    </label>
+                    
+                    <datalist id="lista-isotopos">
+                        <option value="Am-147"></option>
+                        <option value="Cs-137"></option>
+                        <option value="Co-60"></option>
+                    </datalist>
+                    <div class="info-isotopo">
+                        <ul>
+                            <li>Energia: 1.6MeV</li>
+                            <li>Vida media: 32 años</li>
+                            <li>Constante Gamma: </li>
+                        </ul>
+                    </div>
+                    <label for="actividadOriginal">
+                        Actividad Original [MBq]
+                        <input type="number" name="actividadOriginal">
+                    </label><br>
+                    <label for="fechaCal">
+                        Fecha de calibración:
+                        <input type="date" name="fechaCal">
+                    </label>
+                    <label for="serieFuente">
+                        Nombre o No. Serie:
+                        <input type="text"  name="serieFuente">
+                    </label>
+                    <div class="boton-registro"><button>Registrar</button></div>
+                    
+                    
+
+                </form>
+            </section>
+            <section class="alta-isotopo ocultar">
+                <h3>Alta nuevo isotopo </h3>
+                <p>Ingresa los datos correspondientes al isotopo que desea dar de alta</p>
+                <form action="">
+                    <label for="nombreIsotopo">
+                        Isotopo:
+                        <input type="text" name="nombreIsotopo">
+                    </label>
+                    <label for="idIsotopo">
+                        Id :
+                        <input type="text" name="idIsotopo">
+                    </label>
+                    <label for="vidaMedia">
+                    Vida media(años):
+                    <input type="text" name="vidaMedia">
+                    </label>     
+                    <label for="vidaMedia">
+                        Constante especifica de radiacion gamma
+                        <input type="text" name="vidaMedia">
+                    </label>
+                    <div class="boton-registro"><button>Registrar</button></div>
+                
+                
+                
+                </form>
+               
+            </section>  
+
+            <section class="calculo-distancia">
+                <h3>Calculo distancia </h3>
+                <p>Para calcular la distancia a la cual podemos obtener una intensidad de radiación dada tenemos que escoger la fuente radioactiva y la intensidad de radiación que deseamos medir.</p>
+                <datalist id="listado-fuentes">
+                    <option value="Cs-137 Fuente 99"></option>
+                    <option value="Co-60 Fuente 100"></option>
+
+                </datalist>
+                <form action="">
+                    <label for="fuente">
+                        Fuente radioactiva:
+                        <input type="text" name="fuente" id="fuente" list="listado-fuentes">
+                    </label>
+                    <div class="info-isotopo">
+                        <h3>Datos de la fuente </h3>
+                        <ul>
+                            <li>Energia: 1.6MeV</li>
+                            <li>Vida media: 32 años</li>
+                            <li>Constante Gamma: </li>
+                        </ul>
+                    </div>
+                    <label for="iRad">
+                        Intencidad de radiación (mR/h):
+                        <input type="text" name="iRad">
+                    </label>
+                   
+                    <div class="boton-registro"><button>Calcular</button></div>
+
+                    <div class="respuesta">
+                        <h2>Distancia: <span>245 cm</span></h2>
+                    </div>
+            
+            
+            
+                </form>
+            
+            </section>
+        </main>
+    </div>
+
+    <script src="./js/app.js"></script>
+    <script src="https://kit.fontawesome.com/9ff93d62dc.js" crossorigin="anonymous"></script>
+</body>
+</html>

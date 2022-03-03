@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*  
+FUENTES DE GOOGLE
+font-family: 'Fredoka One', cursive;
+font-family: 'Poppins', sans-serif;
+*/
+html {
+  font-size: 62.5%;
+  background-color: rgba(0, 0, 0, 0.712);
+  color: aliceblue;
+  font-family: "Poppins", sans-serif;
+}
+.ocultar {
+  display: none;
+}
+header {
+  margin: 0.8rem 2rem;
+  font-size: 3rem;
+  justify-content: space-between;
+  display: flex;
+  color: yellow;
+}
+header div {
+  display: inline-block;
+  justify-content: space-between;
+}
+
+nav {
+  background-color: black;
+  margin: 2rem 2rem;
+  width: 70%;
+  height: 100%;
+  border-radius: 1rem;
+  position: absolute;
+  margin: 0 auto;
+}
+nav ul {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  font-size: 2rem;
+  -webkit-box-shadow: 4px -1px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px -1px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px -1px 5px 0px rgba(0, 0, 0, 0.75);
+}
+nav ul li {
+  margin: 1.5rem auto;
+  color: azure;
+  padding: 0.5rem;
+}
+nav ul li:hover {
+  cursor: pointer;
+  color: yellow;
+  border-radius: 2px;
+}
+nav ul li i {
+  margin-right: 2rem;
+}
+.fa-xmark {
+  font-size: x-large;
+  position: relative;
+  left: calc(100% - 3rem);
+  top: 1rem;
+}
+.menu {
+}
+main {
+  padding: 2rem;
+}
+.alta-fuente h3 {
+  margin: 1rem auto;
+  text-align: center;
+}
+form {
+  padding: 1rem 0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  margin: 2rem auto;
+  font-size: 1.8rem;
+}
+form .boton-registro {
+  text-align: center;
+  display: block;
+  margin: 1rem auto;
+}
+form button {
+  display: inline-block;
+  width: 15rem;
+  height: 5rem;
+  color: black;
+  background-color: yellow;
+  font-size: x-large;
+  font-family: "Poppins", sans-serif;
+  border-radius: 20px;
+}
+form label input {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 1px solid yellow;
+  color: white;
+  text-decoration: none;
+}
+form label input:focus {
+  border: none;
+  border-style: none;
+  border-bottom: 2px solid red;
+}
+form .info-isotopo {
+  border: 2px solid yellow;
+  padding: 1rem;
+  width: 90%;
+}
+.info-isotopo ul {
+  display: block;
+}
+.info-isotopo ul li {
+  list-style: none;
+}
+.info-isotopo h3 {
+  text-align: center;
+}
+.respuesta {
+  font-size: 1.8rem;
+}

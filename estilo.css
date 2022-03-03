@@ -38,5 +38,5 @@ h1 {
 footer {
   width: 100vw;
   height: 15vh;
-  background-color: var(--color-secundario);
+  background-color:red;
 }
